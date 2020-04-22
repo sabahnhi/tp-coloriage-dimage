@@ -3,6 +3,6 @@
 
 *Membres du groupe:*
 
-- Homer Simpson
-- Ned Flanders
-- Otto Bus
+- Jordan William
+- Coralie Pascal
+- Sabah Nahoui
