@@ -31,6 +31,9 @@ class Pixel:
 
 class Pictures:
 
+# class = juste un type
+
+
     def __init__(self):
         self.image = []
 
@@ -44,9 +47,42 @@ class Pictures:
             liste_largeur.append(p)
             cpt_largeur+=1
         while cpt_longueur < longueur:
-            self.append(liste_largeur)
+            self.image.append(liste_largeur)
             cpt_longueur+=1
-        print(self)
+        print(self.image)
+
+    def get_width(self):
+        return(len(self.image[0]))
+
+    def get_length(self):
+        return(len(self.image))
+
+    def get_pixel(self, i, j):
+        largeur = image.get_width()
+        longueur = image.get_length()
+        if i >= longueur:
+            print("Les coordonnées sont incorrectes")
+        elif j >= largeur:
+            print("Les coordonnées sont incorrectes")
+        else:
+            print(self.image[i][j])
+
+    def get_neighbours(self, i, j):
+        largeur = image.get_width()
+        longueur = image.get_length()
+        # On vérifie que les coordonnées appartiennent bien à l'image
+        if i >= longueur or j >= largeur:
+            print("Les coordonnées sont incorrectes")
+        else:
+            if longueur <= 2:
+               print("longueur <= 2")
+            elif largeur <= 2:
 
 
-Pictures.init_white([],3,2)
+
+image = Pictures()
+image.init_white(3, 2)
+image.get_pixel(2, 1)
+image.get_neighbours(1, 1)
+
+
