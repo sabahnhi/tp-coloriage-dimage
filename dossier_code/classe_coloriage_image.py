@@ -26,7 +26,27 @@ class Pixel:
         self.entier_bleu = entier_bleu
 
     def get_pixel_color(self):
-        print(self.entier_rouge, self.entier_vert, self.entier_bleu)
+        return(self.entier_rouge, self.entier_vert, self.entier_bleu)
 
-pixel = Pixel(255, 255, 255)
-pixel.get_pixel_color()
+
+class Pictures:
+
+    def __init__(self):
+        self.image = []
+
+    def init_white(self, longueur, largeur):
+        cpt_longueur = 0
+        cpt_largeur = 0
+        liste_largeur = []
+        pixel_blanc = Pixel(255, 255, 255)
+        p = pixel_blanc.get_pixel_color()
+        while cpt_largeur < largeur:
+            liste_largeur.append(p)
+            cpt_largeur+=1
+        while cpt_longueur < longueur:
+            self.append(liste_largeur)
+            cpt_longueur+=1
+        print(self)
+
+
+Pictures.init_white([],3,2)
